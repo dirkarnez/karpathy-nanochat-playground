@@ -16,6 +16,7 @@ jobs:
           fetch-depth: 0 # <-- clone with complete history
 
       - run: |
+          sudo chmod +x -R . && \
           ./local-run.sh
           
 
