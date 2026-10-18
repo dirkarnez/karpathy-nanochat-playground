@@ -28,6 +28,8 @@ Linux*)
     curl -LsSf https://astral.sh/uv/install.sh | sh
     source $HOME/.local/bin/env
 
+    export ACTIVATE_SCRIPT=".venv/bin/activate"
+
     ;;
   MSYS_*|MINGW*)
     echo "Running on Windows (MSYS/MSYS2)"
@@ -45,6 +47,8 @@ Linux*)
     export PYTHON_DIR="$(cygpath -u $USERPROFILE)/Downloads/python-3.13.9-amd64-portable"
     export PATH="$PATH:$PYTHON_DIR:$PYTHON_DIR/Scripts"
     export PATH="$PATH:$(cygpath -u $SYSTEMDRIVE)/Program Files/7-Zip:$(cygpath -u $SYSTEMDRIVE)/Program Files (x86)/7-Zip"
+
+    export ACTIVATE_SCRIPT=".venv/Scripts/activate"
 
     # if [ ! -f "$ARMGCC_GCC" ]; then
     #     echo "$ARMGCC_GCC not found. Downloading now..."
@@ -73,6 +77,6 @@ git clone --depth=1 https://github.com/karpathy/nanochat.git
 
 cd nanochat && \
 uv sync --extra cpu && \
-source .venv/bin/activate && \
+source $ACTIVATE_SCRIPT && \
 bash ./runs/speedrun.sh && \
 python -m scripts.chat_cli
