@@ -68,8 +68,11 @@ uv --version
 
 git clone --depth=1 https://github.com/karpathy/nanochat.git
 
+# export USE_LIBUV=0
+# source .venv/Scripts/activate && \
+
 cd nanochat && \
-uv sync --extra gpu && \
-source .venv/Scripts/activate && \
+uv sync --extra cpu && \
+source .venv/bin/activate && \
 bash ./runs/speedrun.sh && \
 python -m scripts.chat_cli
