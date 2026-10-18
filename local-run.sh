@@ -78,5 +78,5 @@ git clone --depth=1 https://github.com/karpathy/nanochat.git
 cd nanochat && \
 uv sync --extra cpu && \
 source $ACTIVATE_SCRIPT && \
-bash ./runs/speedrun.sh && \
+bash ./runs/runcpu.sh && \
 python -m scripts.chat_cli
