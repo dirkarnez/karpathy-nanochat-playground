@@ -1,0 +1,21 @@
+name: run
+
+on: 
+  push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # <-- clone with complete history
+
+      - run: |
+          ./local-run.sh
+          
+
