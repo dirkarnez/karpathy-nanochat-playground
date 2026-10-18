@@ -78,4 +78,4 @@ cd nanochat && \
 uv sync --extra cpu && \
 source $ACTIVATE_SCRIPT && \
 bash ./runs/runcpu.sh && \
-python -m scripts.chat_cli
+python -m scripts.chat_cli -p "Why is the sky blue?"
