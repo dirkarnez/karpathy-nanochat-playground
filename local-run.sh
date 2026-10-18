@@ -73,7 +73,6 @@ uv --version
 git clone --depth=1 https://github.com/karpathy/nanochat.git
 
 # export USE_LIBUV=0
-# source .venv/Scripts/activate && \
 
 cd nanochat && \
 uv sync --extra cpu && \
