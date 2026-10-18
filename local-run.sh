@@ -32,6 +32,7 @@ Linux*)
   MSYS_*|MINGW*)
     echo "Running on Windows (MSYS/MSYS2)"
     
+    # https://releases.astral.sh/github/uv/releases/download/0.13.1/uv-x86_64-pc-windows-msvc.zip
     export PATH="$PATH:$(cygpath -u $USERPROFILE)/Downloads/uv-x86_64-pc-windows-msvc"
 
     export PATH="$PATH:$(cygpath -u $USERPROFILE)/Downloads/PortableGit/bin"
@@ -40,6 +41,7 @@ Linux*)
     export PATH="$PATH:/D/Softwares/cmake-3.29.3-windows-x86_64/bin"  
     export PATH="$PATH:$(cygpath -u $USERPROFILE)/Downloads/cmake-3.29.3-windows-x86_64/cmake-3.29.3-windows-x86_64/bin"
 
+    # https://github.com/dirkarnez/python-portable/releases/download/v3.13.9/python-3.13.9-amd64-portable.zip
     export PYTHON_DIR="$(cygpath -u $USERPROFILE)/Downloads/python-3.13.9-amd64-portable"
     export PATH="$PATH:$PYTHON_DIR:$PYTHON_DIR/Scripts"
     export PATH="$PATH:$(cygpath -u $SYSTEMDRIVE)/Program Files/7-Zip:$(cygpath -u $SYSTEMDRIVE)/Program Files (x86)/7-Zip"
